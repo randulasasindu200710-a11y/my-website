@@ -1,2 +1,130 @@
 # my-website
 this is my first website
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH WORLD - Study Hub</title>
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --accent: #f1c40f;
+            --bg: #f4f7f6;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg); scroll-behavior: smooth; }
+        
+        header { background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); color: white; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 3.5rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        .container { max-width: 1100px; margin: -30px auto 40px; padding: 20px; }
+
+        /* Subject Cards */
+        .subject-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card {
+            background: white; padding: 30px; border-radius: 15px; text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h2 { font-size: 2.5rem; margin: 10px 0; color: #1a2a6c; }
+        
+        .btn {
+            display: inline-block; padding: 12px 25px; background: #1a2a6c; color: white;
+            text-decoration: none; border-radius: 30px; margin-top: 15px; font-weight: bold;
+        }
+
+        /* Note Sections */
+        .note-section { 
+            display: none; background: white; margin-top: 50px; padding: 40px; 
+            border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+        }
+        .note-section:target { display: block; } /* මෙය මගින් අදාළ විෂය පමණක් පෙන්වයි */
+
+        .pdf-list { list-style: none; padding: 0; text-align: left; }
+        .pdf-item { 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px; border-bottom: 1px solid #eee; 
+        }
+        .pdf-item a { color: #d35400; text-decoration: none; font-weight: bold; }
+        
+        .back-btn { display: block; margin-bottom: 20px; color: #777; text-decoration: none; }
+
+        footer { text-align: center; padding: 30px; background: #333; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TECH WORLD</h1>
+    <p>Engineering Technology | Science for Technology | Information Technology </p>
+</header>
+
+<div class="container">
+    <div class="subject-grid">
+        <div class="card">
+            <h2>ET</h2>
+            <p>Engineering Technology</p>
+            <a href="#et-section" class="btn">View Notes</a>
+        </div>
+        <div class="card">
+            <h2>SFT</h2>
+            <p>Science for Technology</p>
+            <a href="#sft-section" class="btn">View Notes</a>
+        </div>
+        <div class="card">
+            <h2>IT</h2>
+            <p>Information Technology</p>
+            <a href="#it-section" class="btn">View Notes</a>
+        </div>
+    </div>
+
+    <div id="et-section" class="note-section">
+        <a href="#" class="back-btn">← Back to Subjects</a>
+        <h3>Engineering Technology (ET) Notes</h3>
+        <h2>CIVIL</h2>
+        <ul class="pdf-list">
+            <li class="pdf-item">
+                <span>Civil Engineering Short Note - Unit 01</span>
+                <a href="https://drive.google.com/file/d/1z6XRHLcMS3Es0CbZS8UPOcmyH0XovrWF/view?usp=drive_link" target="_blank">Download PDF</a>
+            </li>
+            <li class="pdf-item">
+                <span>civil Engineering note-land surveying</span>
+                <a href="https://drive.google.com/file/d/1QOgUld6oBaIWVhe2krh2mu-o9yUDa5Hp/view?usp=sharing" target="_blank">Download PDF</a>
+            </li>
+               <h2>MECHANICAL</h2>
+            <li class="pdf-item">
+                <span>Mechanical Basics -auto mobile</span>
+                <a href="https://drive.google.com/file/d/1PSX8w2K-XTZewBMhX_vgbPhqZ6_iTXqV/view?usp=sharing" target="_blank">Download PDF</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="sft-section" class="note-section">
+        <a href="#" class="back-btn">← Back to Subjects</a>
+        <h2>Science for Technology (SFT) Notes</h2>
+        <ul class="pdf-list">
+            <li class="pdf-item">
+                <span>Physics for Tech - Part 1</span>
+                <a href="#" target="_blank">Download PDF</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="it-section" class="note-section">
+        <a href="#" class="back-btn">← Back to Subjects</a>
+        <h2>Information Technology (IT) Notes</h2>
+        <ul class="pdf-list">
+            <li class="pdf-item">
+                <span>Networking Short Notes</span>
+                <a href="#" target="_blank">Download PDF</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Tech World. Designed by RANDULA.</p>
+</footer>
+
+</body>
+</html>
